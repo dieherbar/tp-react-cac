@@ -17,7 +17,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 //const db = getFirestore(app);
 
 // Get a list of cities from your database

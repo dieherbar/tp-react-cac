@@ -1,17 +1,31 @@
 // Login.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "@/firebase/fireConfigInicial";
-import firebaseui from 'firebaseui';
+
+import { appFirebase } from "@/firebase/fireConfigInicial"
+import { getAuth, signInWithPopup, linkWithPopup } from "firebase/auth"
+import { GoogleAuthProvider, FacebookAuthProvider, TwitterAuthProvider } from "firebase/auth"
+
+//import firebaseui from 'firebaseui';
 // Login.js
 //var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-if (!firebase.apps.length) {
+/*if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
   }
+  */
+  const LoginAi = () => {
+    useEffect(() => {
+      if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+        //const app = initializeApp(firebaseConfig);
+      }
+    }, []);
 
-const auth = firebase.auth();
+//const auth = firebase.auth();
+const auth = getAuth(appFirebase);
 
 // Login.js
 
@@ -30,7 +44,7 @@ const signInWithGoogle = () => {
   // Login.js
 //<button onClick={signInWithGoogle}>Iniciar sesión con Google</button>
 
-const LoginAi = () => {
+//const LoginAi = () => {
     return (
       <div>
         <h2>Iniciar sesión</h2>

@@ -1,7 +1,12 @@
-.footer {
-    background: #46e686;
-    background-color: #035524;
+.Footer {
+    color: #46e686;
+    background-color: #02431c;
     border-radius: 5px;
-    font-size: large;
+    font-size: 1rem;
     font-weight: 500;
+    width: 80%;
+    height: 3rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin: auto;
 }

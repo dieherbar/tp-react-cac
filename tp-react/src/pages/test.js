@@ -1,15 +1,17 @@
 
-import Boton from "@/components/buttons/login"
+import Boton from "@/components/buttons/loginBtn"
 import Barra from "@/components/navBar/barra.js"
 import React, { useState } from 'react';
 import Head from "next/head";
-import Footer from "@/components/footer/footer";
+import Footer from "@/components/footer/footer"
 import SocialLogin from "@/components/login/SocialLogin";
 
 //import React from 'react';
 import ReactDOM from 'react-dom';
 //import Ingresar from "@/components/login/login";
 import LoginAi from "@/components/login/LoginAi";
+import LoginButton from "@/components/buttons/loginBtn";
+import Parrafo from "@/components/ParrafoRelleno";
 
 
 
@@ -31,14 +33,15 @@ export default function Test() {
        <div>
  <Barra></Barra>
         </div>
-        <br></br>
-        <p>hola esto es texto</p><br></br>
-        <SocialLogin></SocialLogin>
+       
+        <Parrafo></Parrafo>
 
+        <SocialLogin></SocialLogin>
         
-        <LoginAi></LoginAi>
+        {/* <LoginAi></LoginAi> */}
+        {/* <LoginButton></LoginButton> */}
   
-);
+
 
         <Footer></Footer>
         </>
