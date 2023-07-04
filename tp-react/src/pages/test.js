@@ -3,7 +3,7 @@ import Boton from "@/components/buttons/loginBtn"
 import Barra from "@/components/navBar/barra.js"
 import React, { useState } from 'react';
 import Head from "next/head";
-import Footer from "@/components/footer/footer"
+import Footer from "@/components/footer/Footer"
 import SocialLogin from "@/components/login/SocialLogin";
 
 //import React from 'react';
@@ -12,6 +12,7 @@ import ReactDOM from 'react-dom';
 import LoginAi from "@/components/login/LoginAi";
 import LoginButton from "@/components/buttons/loginBtn";
 import Parrafo from "@/components/ParrafoRelleno";
+import Titulo from "@/components/headers/titles";
 
 
 
@@ -33,7 +34,7 @@ export default function Test() {
        <div>
  <Barra></Barra>
         </div>
-       
+       <Titulo title="Titulo del test page"></Titulo>
         <Parrafo></Parrafo>
 
         <SocialLogin></SocialLogin>

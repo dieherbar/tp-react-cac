@@ -1,14 +1,16 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
+//import { Inter } from 'next/font/google'
 import React, { useState } from 'react';
 import TaskForm from '../components/TaskForm';
 import TaskList from '../components/TaskList';
 import Boton from '@/components/buttons/loginBtn';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Barra from '@/components/navBar/barra';
+import Titulo from '@/components/headers/titles';
+import Parrafo from '@/components/ParrafoRelleno';
 
 
-const inter = Inter({ subsets: ['latin'] })
+//const inter = Inter({ subsets: ['latin'] })
 
 const HomePage = () => {
   const [tasks, setTasks] = useState([]);
@@ -42,8 +44,10 @@ const HomePage = () => {
     
     <div>
       <Barra></Barra>
+      <br/>
+      <Parrafo />
       <Boton />
-      <h1>Lista de Tareas</h1>
+      <Titulo title="Lista de tareas (props)"></Titulo>
       <TaskForm addTask={addTask} />
       <TaskList tasks={tasks} deleteTask={deleteTask} />
     </div>
