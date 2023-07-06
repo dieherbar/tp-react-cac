@@ -5,6 +5,7 @@ import "firebase/compat/auth";
 import firebaseConfig from "@/firebase/fireConfigInicial";
 import { appFirebase } from "@/firebase/fireConfigInicial"
 import { getAuth, signInWithPopup, linkWithPopup } from "firebase/auth"
+import styles from '@/styles/Button.module.css';
 
 //import firebase from "firebase";
 //firebase.initializeApp(firebaseConfig);
@@ -20,7 +21,7 @@ const LoginButton = () => {
   };
 
   return (
-    <button onClick={handleLogin}>Login</button>
+    <button onClick={handleLogin} className={styles.boton}>Login</button>
   );
 };
 

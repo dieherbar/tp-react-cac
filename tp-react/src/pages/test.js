@@ -5,7 +5,9 @@ import React, { useState } from 'react';
 import Head from "next/head";
 import Footer from "@/components/footer/Footer"
 import SocialLogin from "@/components/login/SocialLogin";
-
+import TaskForm from "@/components/TaskForm";
+import TaskList from "@/components/TaskList";
+import styles from '@/styles/Home.module.css'
 //import React from 'react';
 import ReactDOM from 'react-dom';
 //import Ingresar from "@/components/login/login";
@@ -14,9 +16,23 @@ import LoginButton from "@/components/buttons/loginBtn";
 import Parrafo from "@/components/ParrafoRelleno";
 import Titulo from "@/components/headers/titles";
 
+const Test = () => {
+    const [tasks, setTasks] = useState([]);
 
+  const addTask = title => {
+    const newTask = {
+      id: Date.now(),
+      title
+    };
+    setTasks([...tasks, newTask]);
+  };
 
-export default function Test() {       
+  const deleteTask = id => {
+    const updatedTasks = tasks.filter(task => task.id !== id);
+    setTasks(updatedTasks);
+  };
+
+//function Test() {       
     return(
         <>
 <Head>
@@ -31,9 +47,8 @@ export default function Test() {
   crossorigin="anonymous"
 />
 </Head>
-       <div>
+       <div className={styles.cuerpo}>
  <Barra></Barra>
-        </div>
        <Titulo title="Titulo del test page"></Titulo>
         <Parrafo></Parrafo>
 
@@ -42,9 +57,13 @@ export default function Test() {
         {/* <LoginAi></LoginAi> */}
         {/* <LoginButton></LoginButton> */}
   
-
+        <TaskForm addTask={addTask} />
+      <TaskList tasks={tasks} deleteTask={deleteTask} />
 
         <Footer></Footer>
+
+        </div>
         </>
     )
 }
+export default Test;
