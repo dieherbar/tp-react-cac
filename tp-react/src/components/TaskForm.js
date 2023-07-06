@@ -1,5 +1,6 @@
 // components/TaskForm.js
 import React, { useState } from 'react';
+import styles from '@/styles/Button.module.css'
 
 const TaskForm = ({ addTask }) => {
   const [task, setTask] = useState('');
@@ -22,7 +23,7 @@ const TaskForm = ({ addTask }) => {
         onChange={e => setTask(e.target.value)}
         placeholder="Ingrese una tarea"
         />
-      <button type="submit">Agregar Tarea</button>
+      <button type="submit" className={styles.boton}>Agregar Tarea</button>
     </form> }
         </div>
   </>

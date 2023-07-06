@@ -1,19 +1,13 @@
-/* * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-} */
-
 body {
-    color: rgb(233, 18, 18); 
+    color: rgb(140, 138, 138); 
     background: linear-gradient(
         to bottom,
         transparent,
-        #006400
+        #36fc2b
       )
       #49e003;
   }
-
+ 
   .texto{
     margin: 2rem;
     font-size: 1.5rem;
