@@ -2,10 +2,8 @@
   color: rgb(140, 138, 138); 
   background: linear-gradient(
       to bottom,
-      transparent,
-      #36fc2b
-    )
-    #49e003;
+      transparent,#ade394,#17fb0b
+    );
 }
 
 

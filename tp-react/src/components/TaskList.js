@@ -1,5 +1,7 @@
 // components/TaskList.js
 import React from 'react';
+import Checkbox from './checks/Checkboxes';
+import styles from '@/styles/Button.module.css';
 
 const TaskList = ({ tasks, deleteTask }) => {
   return (
@@ -7,7 +9,8 @@ const TaskList = ({ tasks, deleteTask }) => {
       {tasks.map(task => (
         <li key={task.id}>
           {task.title}
-          <button onClick={() => deleteTask(task.id)}>Eliminar</button>
+          <button className={styles.boton} onClick={() => deleteTask(task.id)}>Eliminar</button>
+          <Checkbox label='Tarea completada'></Checkbox>
         </li>
       ))}
     </ul>

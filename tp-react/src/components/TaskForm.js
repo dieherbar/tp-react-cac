@@ -17,12 +17,7 @@ const TaskForm = ({ addTask }) => {
       <>
       <div>
    {<form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={task}
-        onChange={e => setTask(e.target.value)}
-        placeholder="Ingrese una tarea"
-        />
+      <input type="text" value={task} onChange={e => setTask(e.target.value)} placeholder="Ingrese una tarea" className='inputs'/>
       <button type="submit" className={styles.boton}>Agregar Tarea</button>
     </form> }
         </div>
