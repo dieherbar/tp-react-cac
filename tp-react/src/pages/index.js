@@ -39,7 +39,7 @@ const HomePage = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"   integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"   crossorigin="anonymous"/>
       <link rel="icon" href="/favicon.ico" />
-      <link rel="stylesheet" type="text/css" href="styles/myStyle.css" />
+      
     </Head> 
     
     <div className={styles.cuerpo}>
@@ -50,6 +50,7 @@ const HomePage = () => {
       <Titulo title="Lista de tareas (props)"></Titulo>
       <TaskForm addTask={addTask} />
       <TaskList tasks={tasks} deleteTask={deleteTask} />
+      <Parrafo />
     <Footer></Footer>
     </div>
   </>
